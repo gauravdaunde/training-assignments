@@ -1,6 +1,4 @@
-#Reverse a list.
-
-
+#Find out whether a list is a palindrome.
 
 
 #returning length of list
@@ -12,7 +10,7 @@ def getLengthofList(list):
 	return length_of_list
 
 #returs reversed string
-def getReverseList(temp_list):
+def getReversedList(temp_list):
 	length_of_list = getLengthofList(temp_list)
 	reversed_list = list()       #Initialising new list object
 
@@ -25,15 +23,20 @@ def getReverseList(temp_list):
 	return reversed_list
 
 
+
 #initialized list with random elements
-demo_list = [10,42,73,64,35,29]
+demo_list = [10,42,73,42,10]
 
 
 #printing list
 print("list is: ",demo_list)
 
-#getReversedList function called
-reversed_list = getReverseList(demo_list)
 
-#printing reversed list
-print(f"New reversed list is: {reversed_list}")
+#finding reversed list
+reversed_list = getReversedList(demo_list)
+
+#checking reversed list and original list is same or not
+if demo_list == reversed_list:	  #if same then list is palindrome
+	print('Entered list is palindrome')
+else:
+	print('entered list is not palindrome')

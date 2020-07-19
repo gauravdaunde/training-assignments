@@ -1,7 +1,37 @@
 #Find the K'th element of a list.
 
-demo_list = [11,22,33,44,55,66]
+#function returning length of list
+def getListLength(temp_list):
+    length = 0
+    for item in temp_list:
+        length += 1             #length counter incrementes on every element in the list
+    
+    return length
 
-index = int(input("Enter location: "))
+#getting element with location
+def getElementWithLocation(elements_list,location):
+    length = getListLength(elements_list)               #finding length of list
+    founded_element = None                              #created a variable
 
-print("element at",index,"is",demo_list[index-1]) # finding element by index.(index-1 because index starts from 0.)
+    for index in range(length):
+        if index == (location - 1):
+            founded_element = elements_list[index]              #finding element with location
+            print("element at lcotion",location,"is",founded_element)   #printing founded element
+            return
+    print("List is not having location",location)         #printing if list doesnt have that location
+
+
+#initialized list with random elements
+demo_list = [10,42,73,64,35,29]
+
+
+#printing list
+print("list is: ",demo_list)
+
+#taking input of location
+location = int(input("Enter location: "))
+
+#calling function to found element with location
+getElementWithLocation(demo_list,location)
+
+

@@ -4,6 +4,19 @@ Example:
 (D)
 '''
 
-demo_list = [1,2,3,4,5,6]
+#initialized list with random elements
+demo_list = [10,42,73,64,35,29]
 
-print("Last box in the list is: ",demo_list[-1]) #printitng last element of a list
+#printing list
+print("list is: ",demo_list)
+
+
+#initialized a variable
+last_element = None
+
+#finding last element of a list
+for element in demo_list:
+    last_element = element
+
+#printing last element of list
+print("Last box in the list is: ",last_element) 
