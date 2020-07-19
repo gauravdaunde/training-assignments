@@ -1,2 +1,8 @@
 # training-assignments
-Python Solved Programs
+
+
+
+python lists and arithmetic programs
+
+
+
